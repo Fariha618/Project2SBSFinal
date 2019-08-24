@@ -1,0 +1,129 @@
+﻿@model BusinessManagementSystem.Models.Models.ProductViewModel
+@{
+    ViewBag.Title = "PeriodictIncomeReport";
+    Layout = "~/Views/Shared/_TableLayout.cshtml";
+    Layout = "~/Views/Shared/_AddLayout.cshtml";
+}
+
+<div class="page-breadcrumb">
+    <div class="row">
+        <div class="col-12 d-flex no-block align-items-center">
+            <h4 class="page-title">Periodic Income Expense Report On Sales</h4>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+
+    <div class="card">
+        <form class="form-horizontal" method="post">
+            <div class="card-body">
+                <h4 class="card-title">Search Report On Sale</h4>
+                <div class="row">                  
+
+                    <div class="col-md-9">
+
+                            <div class="form-group row">
+                                <label class="col-sm-3 text-right control-label col-form-label">Start Date</label>
+                                <div class="col-sm-6">
+                                    @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "form-control", @placeholder = "Date" } })
+                                </div>
+                                <div class="input-group-append col-sm-3">
+                                    <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-3 text-right control-label col-form-label">End Date</label>
+                                <div class="col-sm-6">
+                                    @Html.EditorFor(model => model.EndDate, new { htmlAttributes = new { @class = "form-control", @placeholder = "Date" } })
+                                </div>
+                                <div class="input-group-append col-sm-3">
+                                    <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                </div>
+
+
+
+
+
+                <div class="border-top">
+                    <div class="card-body text-center">
+                        <button type="submit" class="btn btn-primary" value="Search">Search</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Search Results</h5>
+
+                    <div class="table-responsive">
+                        <table id="zero_config" class="table table-striped table-bordered">
+
+                            <thead>
+                                <tr>
+                                    <th>SI</th>
+                                    <th>Product Code</th>
+                                    <th>Product Name</th>
+                                    <th>Category</th>
+                                    <th>Cost Price (TK)</th>
+                                    <th>Sale (TK)</th>
+                                    <th>Profit (TK)</th>
+
+                                </tr>
+                            </thead>
+
+                            @if (Model != null)
+                            {
+                                <tbody>
+                                    @{ int sl = 1;}
+                                    @foreach (var product in Model.Products)
+                                    {
+                                        <tr>
+                                            <td>@(sl++)</td>
+                                            <td>@product.ProductCode</td>
+                                            <td>@product.ProductName</td>
+                                            <td>@product.CategoryName</td>
+                                            <td>@product.TotalCostPrice</td>
+                                            <td>@product.SalesPrice</td>
+                                            <td>@product.Profit</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            }
+
+                            <tfoot>
+                                <tr>
+                                    <th>SI</th>
+                                    <th>Product Code</th>
+                                    <th>Product Name</th>
+                                    <th>Category</th>
+                                    <th>Cost Price (TK)</th>
+                                    <th>Sale (TK)</th>
+                                    <th>Profit (TK)</th>
+
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+

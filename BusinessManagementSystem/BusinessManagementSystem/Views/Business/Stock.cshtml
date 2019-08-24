@@ -1,0 +1,224 @@
+﻿@model List<BusinessManagementSystem.Models.StockVM>
+
+@{
+    Layout = "~/Views/Shared/_TableLayout.cshtml";
+    Layout = "~/Views/Shared/_AddLayout.cshtml";
+}
+
+@if (null != TempData["message"])
+{
+    <script type="text/javascript">
+       alert("@TempData["message"]");
+    </script>
+}
+
+<div class="page-breadcrumb">
+    <div class="row">
+        <div class="col-12 d-flex no-block align-items-center">
+            <h4 class="page-title">Stock</h4>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+
+    <div class="card">
+        <form class="form-horizontal" method="post">
+            <div class="card-body">
+                <h4 class="card-title">Search Stock</h4>
+                <div class="row">
+                    <div class="col-md-8">
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 text-right control-label col-form-label">Category</label>
+                            <div class="col-sm-9">
+                                @Html.DropDownList("Category", null, new { @class = "form-control" })
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 text-right control-label col-form-label">Product</label>
+                            <div class="col-sm-9">
+                                <select id="Product" name="ProductID" class="form-control">
+                                    <option value="">Select...</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    @*<div class="col-md-6">
+
+                            <div class="form-group row">
+                                <label class="col-sm-3 text-right control-label col-form-label">Start Date</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="datepicker-startDate" placeholder="mm/dd/yyyy">
+                                </div>
+                                <div class="input-group-append col-sm-3">
+                                    <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-3 text-right control-label col-form-label">End Date</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="datepicker-endDate" placeholder="mm/dd/yyyy">
+                                </div>
+                                <div class="input-group-append col-sm-3">
+                                    <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                </div>
+                            </div>
+
+
+                        </div>*@
+
+                </div>
+
+
+
+                @*<div class="col-md-12">
+                        <div class="form-group row">
+                            <div class="custom-control custom-checkbox col-sm-3">
+                                <input type="checkbox" class="custom-control-input" id="customControlAutosizing1">
+                                <label class="custom-control-label" for="customControlAutosizing1">Reorder Level</label>
+                            </div>
+                            <div class="custom-control custom-checkbox col-sm-3">
+                                <input type="checkbox" class="custom-control-input" id="customControlAutosizing2">
+                                <label class="custom-control-label" for="customControlAutosizing2">Expired</label>
+                            </div>
+                            <div class="custom-control custom-checkbox col-sm-3">
+                                <input type="checkbox" class="custom-control-input" id="customControlAutosizing3">
+                                <label class="custom-control-label" for="customControlAutosizing3">Damage</label>
+                            </div>
+                            <div class="custom-control custom-checkbox col-sm-3">
+                                <input type="checkbox" class="custom-control-input" id="customControlAutosizing4">
+                                <label class="custom-control-label" for="customControlAutosizing4">Lost</label>
+                            </div>
+                        </div>
+                    </div>*@
+
+
+
+                <div class="border-top">
+                    <div class="card-body text-center">
+                        <button type="submit" class="btn btn-primary" id="searchButton">Search</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Search Results</h5>
+
+                    <div class="table-responsive">
+                        <table id="zero_config" class="table table-striped table-bordered">
+
+                            <thead>
+                                <tr>
+                                    <th>SI</th>
+                                    <th>Code</th>
+                                    <th>Name</th>
+                                    <th>Category</th>
+                                    <th>Reorder Level</th>
+                                    <th>Expired Date</th>
+
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @if (Model != null && Model.Count > 0)
+
+                                {
+
+                                    int si = 1;
+
+                                    foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@(si++)</td>
+                                            <td>@item.Product.Code</td>
+                                            <td>@item.Product.Name</td>
+                                            <td>@item.Category.Name</td>
+                                            <td>@item.Product.Reorder_Level</td>
+                                            <td>@item.PurchaseDetail.ExpireDate</td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <th>SI</th>
+                                    <th>Code</th>
+                                    <th>Name</th>
+                                    <th>Category</th>
+                                    <th>Reorder Level</th>
+                                    <th>Expired Date</th>
+
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts{
+
+    <script>
+
+        $('#Category').change(() => {
+
+            var categoryId = $('#Category').val();
+
+            var jsonData = { categoryId: categoryId };
+
+            $.ajax(
+                {
+                    url: "/business/getbycategory",
+                    type: "POST",
+                    data: jsonData,
+                    success: (products) => {
+
+                        $('#Product').empty();
+
+                        $('#Product').append("<option value=''>Select</option>");
+
+
+                        $.each(products, (index, product) => {
+
+                            var option = "<option value='" + product.ID + "'>" + product.Name + "</option>";
+
+                            $('#Product').append(option);
+
+                        }
+                        );
+
+                    },
+                    error: (response) => {
+
+                    }
+
+                });
+
+
+        });
+
+
+    </script>
+
+
+}
+
+
+

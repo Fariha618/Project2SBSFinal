@@ -1,0 +1,258 @@
+﻿@model BusinessManagementSystem.Models.Models.PurchaseVM
+@{
+    ViewBag.Title = "InsertPurchaseProduct";
+    Layout = "~/Views/Shared/_AddLayout.cshtml";
+    Layout = "~/Views/Shared/_TableLayout.cshtml";
+}
+
+@if (ViewBag.Message != null)
+{
+    <h3 class="text-info">@ViewBag.Message</h3>
+}
+
+<div class="page-breadcrumb">
+    <div class="row">
+        <div class="col-12 d-flex no-block align-items-center">
+            <h4 class="page-title">Insert Purchase Products</h4>
+            <div class="ml-auto text-right">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/Business/PurchaseIndex">View Purchased Products</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+
+    
+    <form class="form-horizontal" method="post" id="myForm">
+
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Suppliers</h4>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group row">
+                            <label class="col-sm-3 text-right control-label col-form-label">Date</label>
+                            <div class="col-sm-6">
+                                @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control", @placeholder = "Date" } })
+                                @Html.ValidationMessageFor(c => c.Date, null, new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 text-right control-label col-form-label">Bill/Invoice No.</label>
+                            <div class="col-sm-6">
+                                @Html.EditorFor(model => model.InvoiceNo, new { htmlAttributes = new { @class = "form-control", @placeholder = "Invoice No" } })
+                                @Html.ValidationMessageFor(c => c.InvoiceNo, null, new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-3 text-right control-label col-form-label">Supplier</label>
+                            <div class="col-sm-6">
+                                @Html.DropDownListFor(c => c.SupplierId, ViewBag.Suppliers as SelectList, "--Select--", new { @class = "form-control" })
+                                @Html.ValidationMessageFor(c => c.SupplierId, null, new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="border-top">   </div>
+            </div>
+           </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Products</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+
+                                <label class="col-sm-4 text-right control-label col-form-label">Products</label>
+                                <div class="col-sm-8">
+                                    @Html.DropDownListFor(c => c.ProductId, ViewBag.Products as SelectList, "--Select--", new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 text-right control-label col-form-label">Code</label>
+                                <div class="col-sm-8">
+                                    @Html.TextBoxFor(c => c.ProductCode, null, new { @class = "form-control", @placeholder = "Code", @readonly = "readonly" })
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-4 text-right control-label col-form-label">Manufacture Date</label>
+                                <div class="col-sm-8">
+                                    @Html.EditorFor(c => c.ManufactureDate, new { htmlAttributes = new { @class = "form-control", @placeholder = "Manufacture Date" } })
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-4 text-right control-label col-form-label">Expire Date</label>
+                                <div class="col-sm-6">
+                                    @Html.Editor("ExpireDate", new { htmlAttributes = new { @class = "form-control", @placeholder = "Expire Date" } })
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-4 text-right control-label col-form-label">Remarks</label>
+                                <div class="col-sm-8">
+                                    @Html.TextAreaFor(c => c.Remark, new { @class = "form-control", @placeholder = "Enter your remark text here." })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-4 text-right control-label col-form-label">Quantity</label>
+                                <div class="col-sm-8">
+                                    @Html.TextBoxFor(c => c.Quantity, null, new { @class = "form-control", @placeholder = "Quantity" })
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 text-right control-label col-form-label">Unit Price (TK)</label>
+                                <div class="col-sm-8">
+                                    @Html.TextBoxFor(c => c.UnitPrice, null, new { @class = "form-control", @placeholder = "Unit Price" })
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-4 text-right control-label col-form-label">Total Price (TK)</label>
+                                <div class="col-sm-8">
+                                    @Html.TextBoxFor(c => c.TotalPrice, null, new { @class = "form-control", @placeholder = "Total Price", @readonly = "readonly" })
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-4 text-right control-label col-form-label">Previous Cost Price (TK)</label>
+                                <div class="col-sm-8">
+                                    @Html.TextBoxFor(c => c.PreviousCostPrice, null, new { @class = "form-control", @placeholder = "Cost Price", @readonly = "readonly" })
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-4 text-right control-label col-form-label">Previous MRP (TK)</label>
+                                <div class="col-sm-8">
+                                    @Html.TextBoxFor(c => c.PreviousMRP, null, new { @class = "form-control", @placeholder = "Previous MRP", @readonly = "readonly" })
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-4 text-right control-label col-form-label">New MRP (TK)</label>
+                                <div class="col-sm-8">
+                                    @Html.TextBoxFor(c => c.NewMRP, null, new { @class = "form-control", @placeholder = "New MRP" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="border-top">
+                        <div class="card-body text-center">
+                            <button type="button" class="btn btn-primary" id="AddButton" value="Add">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+
+                    <div class="card">
+                        <div class="card-body" id="productTable">
+                            <h5 class="card-title">Added Products</h5>
+                            <div class="table-responsive">
+                                <table id="zero_config" class="table table-striped table-bordered">
+
+                                    <thead>
+                                        <tr>
+                                            <th>SI</th>
+                                            <th>Product (Code)</th>
+                                            <th>Manufactured Date</th>
+                                            <th>Expired Date</th>
+                                            <th>Quantity</th>
+                                            <th>Unit Price (TK)</th>
+                                            <th>Total Price (TK)</th>
+                                            <th>New MRP (TK)</th>
+                                            <th>Remarks</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="productTableBody">
+                                        @if (Model != null && Model.PurchaseDetails.Count > 0)
+                                        {
+                                            int sl = 1;
+                                            foreach (var product in Model.PurchaseDetails)
+                                            {
+                                                <tr>
+                                                    <td>@(sl++)</td>
+                                                    <td>@product.Product.Code</td>
+                                                    <td>@product.ManufactureDate</td>
+                                                    <td>@product.ExpireDate</td>
+                                                    <td>@product.Quantity</td>
+                                                    <td>@product.UnitPrice</td>
+                                                    <td>@product.TotalPrice</td>
+                                                    <td>@product.NewMRP</td>
+                                                    <td>@product.Remark</td>
+                                                </tr>
+                                            }
+                                        }
+                                    </tbody>
+
+                                    <tfoot>
+                                        <tr>
+                                            <th>SI</th>
+                                            <th>Product (Code)</th>
+                                            <th>Manufactured Date</th>
+                                            <th>Expired Date</th>
+                                            <th>Quantity</th>
+                                            <th>Unit Price (TK)</th>
+                                            <th>Total Price (TK)</th>
+                                            <th>New MRP (TK)</th>
+                                            <th>Remarks</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+
+                            <div class="border-top">
+                                <div class="card-body text-center">
+                                    <button type="submit" class="btn btn-primary" value="Save">Save</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>                  
+                </div>            
+            </div>
+              
+        
+    </form>
+    
+</div>
+
+
+
+
+
+@section Scripts{
+
+
+
+    <script src="~/Scripts/InsertPurchaseProduct.js"></script>
+
+
+
+
+
+}
+
+

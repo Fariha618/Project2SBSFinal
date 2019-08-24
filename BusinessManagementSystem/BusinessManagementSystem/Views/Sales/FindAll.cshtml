@@ -1,0 +1,143 @@
+﻿@model BusinessManagementSystem.Models.SalesSaveViewModel
+@{
+    Layout = "~/Views/Shared/_TableLayout.cshtml";
+}
+
+@if (null != TempData["message"])
+{
+    <script type="text/javascript">
+       alert("@TempData["message"]");
+    </script>
+}
+
+<div class="page-breadcrumb">
+    <div class="row">
+        <div class="col-12 d-flex no-block align-items-center">
+            <h4 class="page-title">Sales Table</h4>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+
+    <div class="card">
+        <form class="form-horizontal" method="post">
+            <div class="card-body">
+                <h4 class="card-title">Search Customer</h4>
+                <div class="row">
+                    <div class="col-md-8">
+
+                        <div class="form-group row">
+                            @Html.LabelFor(c => c.Name, null, new { @for = "name", @class = "col-sm-3 text-right control-label col-form-label" })
+                            <div class="col-sm-9">
+                                @Html.TextBoxFor(c => c.Name, Model.Name, htmlAttributes: new { @class = "form-control", id = "name", placeholder = "Customer Name Here" })
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="border-top">
+                    <div class="card-body text-center">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-12">
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Sales Details</h5>
+                    <div class="table-responsive">
+                        <table id="zero_config" class="table table-striped table-bordered">
+
+                            <thead>
+                                <tr>
+                                    <th>SI</th>
+                                    <th>Customer Name</th>
+                                    <th>Date</th>
+                                    <th>Sales </th>
+                                    <th>Payment</th>
+
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @{ int sl = 1;}
+                                @foreach (var v in Model.SalesList)
+                                {
+                                    <tr>
+                                        <th scope="row">@(sl++)</th>
+                                        <td>@v.Customers.Name</td>
+                                        <td>@v.Date</td>
+                                        <td class="text-center"><a class="voucherNo text-primary" data-id="@v.Id" href="#">@v.Id</a></td>
+                                        <td>@v.CustomerPayment</td>
+                                        
+                                        <td style="text-align:center;">&nbsp<a href="Delete?Id=@v.Id"><i class="fa fa-trash"></i></a></td>
+                                    </tr>
+                                }
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <th>SI</th>
+                                    <th>Customer Name</th>
+                                    <th>Date</th>
+                                    <th>Sales </th>
+                                    <th>Payment</th>
+
+                                    <th>Action</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="salesDetails" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Sales Details</h4>
+                </div>
+                <div class="modal-body" id="salles-view">
+
+                </div>
+                <div class="modal-footer">
+                   
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    @section Scripts{
+        <script>
+            $(document).ready(function () {
+
+                $(".voucherNo").on('click', function () {
+                    var voucherNo = $(this).attr("data-id");
+                    $.ajax(
+                        {
+                            url: "/Sales/VoucherDetails",
+                            type: "POST",
+                            data: { voucherNo: voucherNo },
+                            success: function (data) {
+                                //console.log(data);
+                                $('#salesDetails').modal('show');
+                                $("#salles-view").html(data);
+
+                            }
+                        });
+                });
+            });
+        </script>
+    }

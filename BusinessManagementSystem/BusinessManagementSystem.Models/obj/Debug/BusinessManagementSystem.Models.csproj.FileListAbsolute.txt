@@ -1,0 +1,75 @@
+E:\Small Business Management System\1. MVC Layer Architecture Added\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\BusinessManagementSystem.Models.dll
+E:\Small Business Management System\1. MVC Layer Architecture Added\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\BusinessManagementSystem.Models.pdb
+E:\Small Business Management System\1. MVC Layer Architecture Added\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csprojAssemblyReference.cache
+E:\Small Business Management System\1. MVC Layer Architecture Added\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csproj.CoreCompileInputs.cache
+E:\Small Business Management System\1. MVC Layer Architecture Added\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.dll
+E:\Small Business Management System\1. MVC Layer Architecture Added\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.pdb
+E:\SmallBusinessManagementSystem\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\BusinessManagementSystem.Models.dll
+E:\SmallBusinessManagementSystem\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\BusinessManagementSystem.Models.pdb
+E:\SmallBusinessManagementSystem\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csprojAssemblyReference.cache
+E:\SmallBusinessManagementSystem\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csproj.CoreCompileInputs.cache
+E:\SmallBusinessManagementSystem\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.dll
+E:\SmallBusinessManagementSystem\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.pdb
+F:\Project-2\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\BusinessManagementSystem.Models.dll
+F:\Project-2\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\BusinessManagementSystem.Models.pdb
+F:\Project-2\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csprojAssemblyReference.cache
+F:\Project-2\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csproj.CoreCompileInputs.cache
+F:\Project-2\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.dll
+F:\Project-2\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.pdb
+F:\Project-2\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\System.Web.Mvc.dll
+F:\Project-2\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csproj.CopyComplete
+F:\Project-2\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\System.Web.Mvc.xml
+G:\Nipa\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\BusinessManagementSystem.Models.dll
+G:\Nipa\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\BusinessManagementSystem.Models.pdb
+G:\Nipa\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\System.Web.Mvc.dll
+G:\Nipa\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\System.Web.Mvc.xml
+G:\Nipa\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csprojAssemblyReference.cache
+G:\Nipa\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csproj.CoreCompileInputs.cache
+G:\Nipa\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csproj.CopyComplete
+G:\Nipa\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.dll
+G:\Nipa\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.pdb
+C:\Users\HP\Desktop\Nipa\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\BusinessManagementSystem.Models.dll
+C:\Users\HP\Desktop\Nipa\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\BusinessManagementSystem.Models.pdb
+C:\Users\HP\Desktop\Nipa\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\System.Web.Mvc.dll
+C:\Users\HP\Desktop\Nipa\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\System.Web.Mvc.xml
+C:\Users\HP\Desktop\Nipa\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csprojAssemblyReference.cache
+C:\Users\HP\Desktop\Nipa\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Nipa\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csproj.CopyComplete
+C:\Users\HP\Desktop\Nipa\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.dll
+C:\Users\HP\Desktop\Nipa\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.pdb
+F:\BusinessManagementSystem-20190823T090219Z-001\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\BusinessManagementSystem.Models.dll
+F:\BusinessManagementSystem-20190823T090219Z-001\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\BusinessManagementSystem.Models.pdb
+F:\BusinessManagementSystem-20190823T090219Z-001\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\System.Web.Mvc.dll
+F:\BusinessManagementSystem-20190823T090219Z-001\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\System.Web.Mvc.xml
+F:\BusinessManagementSystem-20190823T090219Z-001\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csprojAssemblyReference.cache
+F:\BusinessManagementSystem-20190823T090219Z-001\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csproj.CoreCompileInputs.cache
+F:\BusinessManagementSystem-20190823T090219Z-001\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csproj.CopyComplete
+F:\BusinessManagementSystem-20190823T090219Z-001\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.dll
+F:\BusinessManagementSystem-20190823T090219Z-001\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.pdb
+F:\BusinessManagementSystem-20190823T090219Z-001\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\AutoMapper.dll
+F:\BusinessManagementSystem-20190823T090219Z-001\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\AutoMapper.pdb
+F:\BusinessManagementSystem-20190823T090219Z-001\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\AutoMapper.xml
+H:\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\BusinessManagementSystem.Models.dll
+H:\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\BusinessManagementSystem.Models.pdb
+H:\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\AutoMapper.dll
+H:\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\System.Web.Mvc.dll
+H:\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\AutoMapper.pdb
+H:\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\AutoMapper.xml
+H:\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\System.Web.Mvc.xml
+H:\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csprojAssemblyReference.cache
+H:\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csproj.CoreCompileInputs.cache
+H:\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csproj.CopyComplete
+H:\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.dll
+H:\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.pdb
+F:\Project2Final\SmallBusinessManagementSystem\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\BusinessManagementSystem.Models.dll
+F:\Project2Final\SmallBusinessManagementSystem\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\BusinessManagementSystem.Models.pdb
+F:\Project2Final\SmallBusinessManagementSystem\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\AutoMapper.dll
+F:\Project2Final\SmallBusinessManagementSystem\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\System.Web.Mvc.dll
+F:\Project2Final\SmallBusinessManagementSystem\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\AutoMapper.pdb
+F:\Project2Final\SmallBusinessManagementSystem\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\AutoMapper.xml
+F:\Project2Final\SmallBusinessManagementSystem\BusinessManagementSystem\BusinessManagementSystem.Models\bin\Debug\System.Web.Mvc.xml
+F:\Project2Final\SmallBusinessManagementSystem\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csprojAssemblyReference.cache
+F:\Project2Final\SmallBusinessManagementSystem\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csproj.CoreCompileInputs.cache
+F:\Project2Final\SmallBusinessManagementSystem\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.csproj.CopyComplete
+F:\Project2Final\SmallBusinessManagementSystem\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.dll
+F:\Project2Final\SmallBusinessManagementSystem\BusinessManagementSystem\BusinessManagementSystem.Models\obj\Debug\BusinessManagementSystem.Models.pdb
